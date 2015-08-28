@@ -1,0 +1,2 @@
+webpack: sh -c '$(npm bin)/webpack -wc'
+web: rails s

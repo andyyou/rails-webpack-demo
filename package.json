@@ -1,0 +1,22 @@
+{
+  "name": "rails_with_webpack",
+  "version": "1.0.0",
+  "description": "== README",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "andyyou",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^5.8.22",
+    "babel-loader": "^5.3.2",
+    "lodash": "^3.10.1",
+    "moment": "^2.10.6",
+    "react": "^0.13.3",
+    "webpack": "^1.12.0"
+  }
+}

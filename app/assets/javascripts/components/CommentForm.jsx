@@ -1,6 +1,9 @@
 import $ from 'jquery';
 import React from 'react/addons';
+import CSSModules from 'react-css-modules';
+import styles from '../../stylesheets/components/comment_form';
 
+@CSSModules(styles)
 class CommentForm extends React.Component {
   constructor(props) {
     super(props);
@@ -45,18 +48,24 @@ class CommentForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={::this._handleSubmit}>
-        <input type='text' 
-               name='author' 
-               placeholder="Your name" 
-               value={this.state.author} 
-               onChange={::this._handleChange} />
-
-        <textarea name="body"
-                  value={this.state.body}
-                  onChange={::this._handleChange} />
-
-        <button type='submit' disabled={!this._valid()}>Comment</button>
+      <form onSubmit={::this._handleSubmit} styleName="form">
+        <div styleName="field">
+          <input type='text'
+                 name='author' 
+                 placeholder="Your name" 
+                 value={this.state.author} 
+                 onChange={::this._handleChange} />
+        </div>
+        <div styleName="field">
+          <input type="text"
+                 name="body"
+                 placeholder="Type comment" 
+                 value={this.state.body}
+                 onChange={::this._handleChange} />
+        </div>
+        <div styleName="field">
+          <button type='submit' disabled={!this._valid()}>Comment</button>
+        </div>
       </form>
     );
   }

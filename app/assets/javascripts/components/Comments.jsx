@@ -1,11 +1,14 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react/addons';
+import CSSModules from 'react-css-modules';
 import Comment from './Comment';
 import CommentForm from './CommentForm';
+import styles from '../../stylesheets/components/comments';
 
 const update = React.addons.update;
 
+@CSSModules(styles)
 class Comments extends React.Component {
   constructor(props) {
     super(props);
@@ -37,11 +40,11 @@ class Comments extends React.Component {
 
   render() {
     return (
-      <div className="comments">
-        <h2>Comments</h2>
+      <div styleName="comments">
+        <h2 styleName="comments__heading">Comments</h2>
         <CommentForm 
           onNewComment={::this._addComment} />
-        <table>
+        <table styleName="table">
           <thead>
             <tr>
               <th>Date</th>

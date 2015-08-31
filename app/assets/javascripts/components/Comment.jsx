@@ -23,7 +23,7 @@ class Comment extends React.Component {
   _handleToggle(e) {
     e.preventDefault();
     this.setState({editable: !this.state.editable});
-  }
+  } 
 
   _handleEdit(e) {
     e.preventDefault();
@@ -73,8 +73,9 @@ class Comment extends React.Component {
                  ref="author" />
         </td>
         <td>
-          <textarea defaultValue={this.props.body}
-                    ref="body" />
+          <input type="text" 
+                 defaultValue={this.props.body}
+                 ref="body" />
         </td>
         <td>
           <button onClick={ ::this._handleEdit }>

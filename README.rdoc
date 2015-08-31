@@ -1,28 +1,12 @@
-== README
+# Integrate Rails with Webpack using Foreman
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Debug
 
-Things you may want to cover:
+Using `pry-remote` instead of `pry-rails`, after config it in gemfile and excute bundle.
+You have to change `binding.pry` to `binding.remote_pry` in breakpoint you want.
 
-* Ruby version
+When the breakpoint is hit, pry-remote will block your app and open up a DRb endpoint that a client can connect to. Running pry-remote in a shell will then connect to the session and you’ll be able to interact with Pry as you normally would.
 
-* System dependencies
+`Ctrl + d` or `exit` in the Pry session to unblock the application.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+[The toturial](https://www.bignerdranch.com/blog/debugging-remote-processes-with-pry-remote/)
